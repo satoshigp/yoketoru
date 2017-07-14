@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TitleManager : MonoBehaviour {
 
-
+	void Start(){
+		GameParams.DrawScore ();
+	}
 	
 	// Update is called once per frame
 	void Update () {

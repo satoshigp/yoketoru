@@ -15,7 +15,7 @@ public class gamemanager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		GameParams.AddScore (100);
+		GameParams.AddScore (1);
 
 		if (Input.GetKeyDown (KeyCode.O)) {
 			NextScene = "gameover";
@@ -26,6 +26,9 @@ public class gamemanager : MonoBehaviour {
 		//Aキー
 		else if (Input.GetKey (KeyCode.A)) {
 			GameParams.AddScore (10000);
+		} else if (Input.GetMouseButtonDown(1)) {
+			GameParams.AddScore (10000);
+		
 		}
 		if(NextScene.Length>0){
 			SceneManager.LoadSceneAsync (NextScene,LoadSceneMode.Additive);
