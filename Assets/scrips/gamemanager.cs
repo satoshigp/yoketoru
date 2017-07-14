@@ -8,17 +8,24 @@ public class gamemanager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		GameParams.SetScore (0);
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.O)){
+
+		GameParams.AddScore (100);
+
+		if (Input.GetKeyDown (KeyCode.O)) {
 			NextScene = "gameover";
-	}
-		else if(Input.GetKeyDown(KeyCode.C)){
+		} else if (Input.GetKeyDown (KeyCode.C)) {
 			NextScene = "clear";
 
+		}
+		//Aキー
+		else if (Input.GetKey (KeyCode.A)) {
+			GameParams.AddScore (10000);
 		}
 		if(NextScene.Length>0){
 			SceneManager.LoadSceneAsync (NextScene,LoadSceneMode.Additive);
