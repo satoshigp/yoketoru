@@ -21,17 +21,19 @@ public class gamemanager : MonoBehaviour {
 		set{
 			if ((NextScene != "clear")||(value=="")) {
 				_nextScene = value;
+				Time.timeScale = 0;
 			}
 		}
 	}
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 1;
 		GameParams.SetScore (0);
 		_nextScene = "";
 		MoveBALL.clearBallCount ();
 
-		//アイテム
+		/*//アイテム
 		for (int s = 0; s < ItemCount; s++) {
 			Instantiate (prefItem);
 		}
@@ -39,7 +41,7 @@ public class gamemanager : MonoBehaviour {
 		//敵の出現
 		for (int i = 0; i < TekiCount; i++) {
 			Instantiate (prefTeki);
-		}
+		}*/
 
 	}
 	

@@ -24,8 +24,9 @@ public class MoveBALL : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
 		rig = GetComponent<Rigidbody> ();
+		/*
 		rig.velocity = new Vector3 (vx, vy, 0f);
 
 		//自分の座標をランダムで設定
@@ -34,7 +35,8 @@ public class MoveBALL : MonoBehaviour {
 			              Random.Range (MIN_y, MAX_y),
 			              0f);
 		transform.position = pos;
-		Debug.Log ("start: "+tag+"/"+transform.position);
+		*/
+		//Debug.Log ("start: "+tag+"/"+transform.position);
 		//自分のタグがitemか確認
 		//いｆ文で条件式が省略されていた場合
 		//条件式のところがtrueかfalseを返すようになっている
@@ -62,7 +64,8 @@ public class MoveBALL : MonoBehaviour {
 				}
 			}
 
-			Destroy (gameObject);
+		Destroy (gameObject);
 		}
 	}
+
 }
